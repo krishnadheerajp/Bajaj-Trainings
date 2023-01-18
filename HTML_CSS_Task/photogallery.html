@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Photo Gallery</title>
     <style>
         table {
@@ -16,7 +17,9 @@
         tr, td {
             border: 1px solid black;
             background-color: lightblue;
-            box-shadow: 5px 10px #888888;
+        }
+        td{
+            box-shadow: 5px 8px #888888;
         }
         .center {
             margin-left: auto;
@@ -28,27 +31,33 @@
             .thirdrow>td>img{
                  filter: sepia(30%); 
             } 
+        .pgtitle{
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
-    <table class="center" cellspacing="15" cellpadding="15">
-        <tr>
-            <td><img src="https://picsum.photos/id/237/200/300" alt=""></td>
-            <td><img src="https://picsum.photos/id/238/200/300" alt=""></td>
-            <td><img src="https://picsum.photos/id/230/200/300" alt=""></td>
-        </tr>
-        <tr class="secondrow">
-            <td><img src="https://picsum.photos/id/231/200/300" alt=""></td>
-            <td><img src="https://picsum.photos/id/232/200/300" alt=""></td>
-            <td><img src="https://picsum.photos/id/233/200/300" alt=""></td>
-        </tr>
-        <tr class="thirdrow">
-            <td><img src="https://picsum.photos/id/137/200/300" alt=""></td>
-            <td><img src="https://picsum.photos/id/139/200/300" alt=""></td>
-            <td><img src="https://picsum.photos/id/140/200/300" alt=""></td>
-        </tr>
-    </table>
+    <h1 class="pgtitle">Photo Gallery</h1>
+    <div class="container">
+        <table class="center" cellspacing="15" cellpadding="15">
+            <tr>
+                <td><img src="https://picsum.photos/id/237/200/300" alt=""></td>
+                <td><img src="https://picsum.photos/id/238/200/300" alt=""></td>
+                <td><img src="https://picsum.photos/id/230/200/300" alt=""></td>
+            </tr>
+            <tr class="secondrow">
+                <td><img src="https://picsum.photos/id/231/200/300" alt=""></td>
+                <td><img src="https://picsum.photos/id/232/200/300" alt=""></td>
+                <td><img src="https://picsum.photos/id/233/200/300" alt=""></td>
+            </tr>
+            <tr class="thirdrow">
+                <td><img src="https://picsum.photos/id/137/200/300" alt=""></td>
+                <td><img src="https://picsum.photos/id/139/200/300" alt=""></td>
+                <td><img src="https://picsum.photos/id/140/200/300" alt=""></td>
+            </tr>
+        </table>
+    </div>
 </body>
 
 </html>

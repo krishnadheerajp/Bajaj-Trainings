@@ -5,60 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <style>
-    nav ul {
-        margin: 0;
-        padding: 0;
-    }
-
-    nav ul li {
-        display: inline;
-        margin: 5px;
-    }
-
     #musicp{
         column-count: 3;
         column-gap: 100px;
-		column-rule: 20px solid green;
+		column-rule: 10px solid rgb(110, 182, 110);
     }
 
-    @media screen and (max-width: 480px) {
-  body>.main-content {
+    @media screen and (max-width: 600px) {
+  .main-content>section {
 background-color: aqua;
   }
 }
-@media (min-width:481px) and (max-width: 768px) {
-  body >.main-content{
-background-color: lightgreen;
+@media (min-width:601px) and (max-width: 900px) {
+  .main-content>section{
+background-color: lightsalmon;
   }
 }
 
-@media (min-width:769px){
-    body>.main-content{
+@media (min-width:901px){
+    .main-content>section{
         background-color: bisque;
     }
 }
-.main-content{
+.main-content>section{
     padding: 10px;
+    border-radius: 25px;
 }
-nav{
-    margin: 10px;
+.btitles{
+    background-color: rgb(132, 55, 55);
+    color: white;
+    border-radius: 25px;
+    width: 100%;
 }
-
+section>img{
+ height: 350px !important;
+ width: 50%;
+}
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#movies">Movies</a></li>
-            <li><a href="#music">Music</a></li>
-            <li><a href="#sports">Sports</a></li>
-            <li><a href="#dance">Dance</a></li>
-        </ul>
-    </nav>
+<div class="container mt-3">
+    <h2 class="text-center">Please choose a Blog Title </h2>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">Movies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#music">Music</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#sports">Sports</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#dance">Dance</a>
+        </li>
+      </ul>
     <div class="main-content">
-    <section>
-        <h3 id="movies">MOVIES</h3>
+    <section class="my-4">
+        <h3 class="text-center btitles" id="movies">MOVIES</h3>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur similique, amet perferendis laboriosam tempora incidunt! Sapiente dolores quas aperiam animi odit quasi est minima quia repellendus vel, neque ratione maiores!
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis tempora aut porro, odit nihil maxime harum officia amet quam adipisci, vel ipsum doloribus cupiditate officiis minima dignissimos. Quo, quas veniam.
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut facere quasi accusantium ut ab obcaecati dignissimos ipsam magni natus reiciendis. At animi obcaecati nulla. Magni assumenda eveniet odit in aspernatur?
@@ -68,9 +78,10 @@ nav{
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione ab quos assumenda laboriosam, neque, corrupti mollitia, voluptates quisquam soluta quod delectus laborum dicta commodi? Dolorem dicta architecto fuga ipsum nisi.
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat maxime, voluptatibus quibusdam quidem perferendis eligendi qui repudiandae rerum, nulla architecto aperiam nesciunt eos quasi culpa neque nisi. Exercitationem, dolorem hic!
         </p>
+        <img src="images/movieimg.jpeg" width="100%" class="mb-3  mx-auto d-block  img-fluid" alt="">
       </section>
-      <section>
-      <h3 id="music">MUSIC</h3>
+      <section class="my-4">
+      <h3 class="text-center btitles" id="music">MUSIC</h3>
       <p id="musicp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur similique, amet perferendis laboriosam tempora incidunt! Sapiente dolores quas aperiam animi odit quasi est minima quia repellendus vel, neque ratione maiores!
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis tempora aut porro, odit nihil maxime harum officia amet quam adipisci, vel ipsum doloribus cupiditate officiis minima dignissimos. Quo, quas veniam.
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut facere quasi accusantium ut ab obcaecati dignissimos ipsam magni natus reiciendis. At animi obcaecati nulla. Magni assumenda eveniet odit in aspernatur?
@@ -81,8 +92,8 @@ nav{
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat maxime, voluptatibus quibusdam quidem perferendis eligendi qui repudiandae rerum, nulla architecto aperiam nesciunt eos quasi culpa neque nisi. Exercitationem, dolorem hic!
       </p>
     </section>
-    <section>
-    <h3 id="sports">SPORTS</h3>
+    <section class="my-4">
+    <h3 class="text-center btitles" id="sports">SPORTS</h3>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur similique, amet perferendis laboriosam tempora incidunt! Sapiente dolores quas aperiam animi odit quasi est minima quia repellendus vel, neque ratione maiores!
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis tempora aut porro, odit nihil maxime harum officia amet quam adipisci, vel ipsum doloribus cupiditate officiis minima dignissimos. Quo, quas veniam.
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut facere quasi accusantium ut ab obcaecati dignissimos ipsam magni natus reiciendis. At animi obcaecati nulla. Magni assumenda eveniet odit in aspernatur?
@@ -92,9 +103,10 @@ nav{
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione ab quos assumenda laboriosam, neque, corrupti mollitia, voluptates quisquam soluta quod delectus laborum dicta commodi? Dolorem dicta architecto fuga ipsum nisi.
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat maxime, voluptatibus quibusdam quidem perferendis eligendi qui repudiandae rerum, nulla architecto aperiam nesciunt eos quasi culpa neque nisi. Exercitationem, dolorem hic!
     </p>
+    <img src="images/sportsimg.jpeg" width="100%" class="mb-3 mx-auto d-block img-fluid" alt="">
   </section>
-  <section>
-  <h3 id="dance">DANCE</h3>
+  <section class="my-4">
+  <h3 class="text-center btitles" id="dance">DANCE</h3>
   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur similique, amet perferendis laboriosam tempora incidunt! Sapiente dolores quas aperiam animi odit quasi est minima quia repellendus vel, neque ratione maiores!
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis tempora aut porro, odit nihil maxime harum officia amet quam adipisci, vel ipsum doloribus cupiditate officiis minima dignissimos. Quo, quas veniam.
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut facere quasi accusantium ut ab obcaecati dignissimos ipsam magni natus reiciendis. At animi obcaecati nulla. Magni assumenda eveniet odit in aspernatur?
@@ -104,7 +116,9 @@ nav{
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione ab quos assumenda laboriosam, neque, corrupti mollitia, voluptates quisquam soluta quod delectus laborum dicta commodi? Dolorem dicta architecto fuga ipsum nisi.
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat maxime, voluptatibus quibusdam quidem perferendis eligendi qui repudiandae rerum, nulla architecto aperiam nesciunt eos quasi culpa neque nisi. Exercitationem, dolorem hic!
   </p>
+  <img src="images/danceimg.jpeg" width="100%" class="mb-3  mx-auto d-block  img-fluid" alt="">
 </section>
+</div>
 </div>
 </body>
 </html>

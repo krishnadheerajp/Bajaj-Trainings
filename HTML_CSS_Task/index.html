@@ -8,6 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Live Virtual Class</title>
@@ -33,18 +35,18 @@
 
     .course-titles{
         border: 1px solid black;
-        background-color: aqua;
+        background-color: rgb(102, 201, 201);
         padding: 5px;
     }
 
-    footer {
-        position: fixed;
-        bottom: 0;
+    /* footer { */
+        /* position: fixed;*/
+        /* bottom: 0;
         left: 0;
         background-color: silver;
         min-width: 100%;
-        text-align: center;
-    }
+        text-align: center; */
+    /* } */
 
     .fa {
         padding: 10px;
@@ -99,16 +101,17 @@
         to {background:lightseagreen;}
     }
 
+    /* .main-frame{
+      height: 900px;
+    } */
+
     .carousel-item {
-  height: 40vh;
+  height: 50vh;
 }
 
 </style>
 
 <body>
-    <!-- <header>
-        <h1 style="color: white;" id="main-title">Live Virtual Class</h1>
-    </header> -->
     <div id="carouselExampleIndicators" class="carousel slide slider" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -120,10 +123,10 @@
             <img src="images/slider1.jpeg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="images/slider1.jpeg" class="d-block w-100" alt="...">
+            <img src="images/slider2.png" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="images/slider1.jpeg" class="d-block w-100" alt="...">
+            <img src="images/slider3.jpeg" class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -135,17 +138,7 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-    <!-- <nav class="mx-2">
-        <ul class="nav-links">
-            <li><a href="about.html" target="iframe_a">Home</a></li>
-            <li><a href="courses.html" target="iframe_a">All Courses</a></li>
-            <li><a href="registration.html" target="iframe_a">Registration</a></li>
-            <li><a href="photogallery.html" target="iframe_a">Photo Gallery</a></li>
-            <li><a href="blog.html" target="iframe_a">Blog</a></li>
-            <li><a href="#">Help</a></li>
-            <li><a href="contact.html" target="iframe_a">Contact Us</a></li>
-        </ul>
-    </nav> -->
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="about.html" target="iframe_a">Home</a>
@@ -177,9 +170,6 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="contact.html" target="iframe_a">Contact</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="about.html" target="iframe_a">Help</a>
-              </li>
             </ul>
           </div>
         </div>
@@ -187,12 +177,12 @@
       <h1 style="color: black;" id="main-title">Live Virtual Class</h1>
     <section>
 
-        <iframe src="about.html" height="1300px" width="100%" name="iframe_a" frameborder="0"></iframe>
+        <iframe src="about.html" class="main-frame" id="targetiframe" width="100%" name="iframe_a" frameborder="0"></iframe>
 
     </section>
 
-    <footer>
-        <p class="mt-3"><strong>Most Important Course for the Professionals:</strong>
+    <footer class="container-fluid bg-dark text-light mt-3 p-2 text-center">
+        <p class="pt-3"><strong>Most Important Course for the Professionals:</strong>
             <span class="course-titles"> MEAN</span>
             <span class="course-titles">MERN</span>
             <span class="course-titles">DEVOPS</span>
@@ -205,5 +195,11 @@
         <p><strong>Website Designed & Developed By:</strong> <i>P Krishna Dheeraj</i></p>
     </footer>
 </body>
-
+<script>
+  var div = document.getElementById("targetiframe");
+  div.onload = function() {
+      div.style.height =
+        div.contentWindow.document.body.scrollHeight + 'px';
+  }
+</script>
 </html>
