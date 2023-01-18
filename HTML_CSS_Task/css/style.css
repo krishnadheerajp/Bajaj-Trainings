@@ -1,1 +1,10 @@
-
+#main-title{
+    text-align: center;
+}
+.nav-links>li>a{
+    text-decoration: none;
+}
+.nav-links>li>a:hover{
+    color: red;
+    text-decoration: underline;
+}
