@@ -5,6 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .gradient {
+		width: 400px;
+		height: 300px;
+		background: repeating-radial-gradient(black, white 10%, lime 20%);
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+    p{
+        text-align: center;
+    }
+
+    .content {
+	    
+	    margin-left: auto;
+        margin-right: auto;
+	    display: flex;
+	    flex-flow: column;
+	    justify-content: center;
+	    text-align: center;
+	    
+	    width: 150px;
+	    height: 150px;
+	    padding: 7px;
+	    
+	    background: yellow;
+	}
+    .content>p{
+        margin-top: 20px;
+    }
+    </style>
 </head>
 <body>
     <h2>Courses :</h2>
@@ -14,5 +46,11 @@
         <li>MERN</li>
         <li>MS-Java</li>
     </ul>
+
+    <div class="gradient"></div>
+
+    <div class="content">
+        <p>Learnings beyond your iamgination</p>
+    </div>
 </body>
 </html>

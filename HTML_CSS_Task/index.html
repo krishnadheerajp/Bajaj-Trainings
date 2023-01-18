@@ -17,6 +17,9 @@
         /* background-image: url('images/class.webp'); */
         /* min-height: 40vh; */
     /* } */
+    body{
+        overflow-x: hidden !important;
+    }
 
     nav ul {
         margin: 0;
@@ -81,6 +84,7 @@
         position: relative;
         animation-name: moveit;
         animation: moveit 15s linear 0s infinite alternate;
+        text-shadow: 5px 5px 5px rgb(119, 74, 74);
     }
 
     @keyframes moveit {
@@ -91,6 +95,8 @@
         to {
             left: 100%;
         }
+        from {background:lightcoral;}
+        to {background:lightseagreen;}
     }
 
     .carousel-item {
