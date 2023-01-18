@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <script>
+        function subfun(){
+            alert("The form was submitted successfully");
+        }
+    </script>
+    <style>
+        .formclass {
+            border: 2px solid black;
+            padding: 15px;
+            border-radius: 25px;
+            background-color: bisque;
+            margin-bottom: 200px;
+            max-width: 75vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="formclass">
+        <h2>Registration Form</h2>
+        <form onsubmit="return subfun();" action="index.html" method="post">
+            <label for="name">Name:</label>
+        <input type="text" name="" placeholder="Your name here" id="" required> <br><br>
+
+        <label for="">Gender:</label>
+        <input type="radio" name="age" id="">
+        <label for="male">Male</label>
+        <input type="radio" name="age" id="">
+        <label for="female">Female</label> <br> <br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="" id="" placeholder="Your email here" required>
+        <br> <br>
+
+        <label for="location">Location:</label>
+  <select name="location" id="location">
+    <option value="value" selected>Select Box</option>
+    <option value="Pune">Pune</option>
+    <option value="Mumbai">Mumbai</option>
+  </select> <br>
+  <br>
+  <label for="sk">Software Knowledge:</label> <br>
+  <input type="checkbox" id="skill1" name="skill1" value="Word">
+  <label for="skill1">Word</label>
+  <input type="checkbox" id="skill2" name="skill2" value="PHP">
+  <label for="skill2"> PHP</label>
+  <input type="checkbox" id="skill3" name="skill3" value="MS-Java">
+  <label for="skill3"> MS-Java</label>
+  <br><br>
+
+  <label for="remark">Remarks:</label> <br>
+  <textarea name="" id="" cols="30" rows="10"></textarea> <br> <br>
+
+  <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
