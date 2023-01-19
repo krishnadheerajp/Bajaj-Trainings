@@ -13,9 +13,11 @@
             var email=document.getElementById("email").value;
             if(name==""){
               alert("Name is required!");
+                return false;
             }
             else if(email==""){
               alert("Email is required!");
+                return false;
             }
             else{
               if(document.getElementById("male").checked){
