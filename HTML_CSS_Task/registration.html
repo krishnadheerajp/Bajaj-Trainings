@@ -9,7 +9,46 @@
     <title>Registration Form</title>
     <script>
         function subfun(){
-            alert("The form was submitted successfully");
+            var name=document.getElementById("username").value;
+            var email=document.getElementById("email").value;
+            if(name==""){
+              alert("Name is required!");
+            }
+            else if(email==""){
+              alert("Email is required!");
+            }
+            else{
+              if(document.getElementById("male").checked){
+                var gender="Male";
+              }
+              else if(document.getElementById("female").checked){
+                var gender="Female";
+              }
+              var skills="";
+              if(document.getElementById("skill1").checked){
+                skills+="Word ";
+              }
+              if(document.getElementById("skill2").checked){
+                skills+="PHP ";
+              }
+              if(document.getElementById("skill3").checked){
+                skills+="MS-Java";
+              }
+              var courses="";
+              if(document.getElementById("MEAN").selected){
+                courses+="MEAN ";
+              }
+              if(document.getElementById("MERN").selected){
+                courses+="MERN ";
+              }
+              if(document.getElementById("DEVOPS").selected){
+                courses+="DEVOPS";
+              }
+              var remarks=document.getElementById("remarks").value;
+              text="Name: "+name+", Email: "+email+", Gender "+gender+", Software Knowledge: "+skills+", Courses Registered: "+courses+
+              ", Remarks "+remarks;
+              alert(text);
+            }
         }
     </script>
     <style>
@@ -36,25 +75,26 @@
               <div class="card-body" style="height: 50%">
                 <div class="formclass">
                     <h2>Registration Form</h2>
-                    <form onsubmit="return subfun();" action="index.html" method="post">
+                    <form name="main-form" onsubmit="return subfun();" action="thanks.html">
                         <label for="name" class="form-label">Name:</label>
-                    <input type="text" name="" class="form-controle" placeholder="Your name here" id="" required> <br><br>
+                    <input type="text" name="username" class="form-controle" placeholder="Your name here" id="username"> <br><br>
             
                     <label for="">Gender:</label>
-                    <input type="radio" name="age" id="">
+                    <input type="radio" name="gender" id="male">
                     <label for="male">Male</label>
-                    <input type="radio" name="age" id="">
+                    <input type="radio" name="gender" id="female">
                     <label for="female">Female</label> <br> <br>
             
                     <label class="form-label" for="email">Email:</label>
-                    <input class="form-control" type="email" name="" id="" placeholder="Your email here" required>
+                    <input class="form-control" type="email" id="email" placeholder="Your email here">
                     <br> <br>
             
-                    <label for="location">Location:</label>
+                    <label for="location">Courses required:</label>
               <select name="location" id="location">
                 <option value="value" selected>Select Box</option>
-                <option value="Pune">Pune</option>
-                <option value="Mumbai">Mumbai</option>
+                <option value="MEAN" id="MEAN">MEAN</option>
+                <option value="MERN" id="MERN">MERN</option>
+                <option value="DEVOPS" id="DEVOPS">DEVOPS</option>
               </select> <br>
               <br>
               <label  class="form-label" for="sk">Software Knowledge:</label> <br>
@@ -67,7 +107,7 @@
               <br><br>
             
               <label for="remark" class="form-label">Remarks:</label> <br>
-              <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea> <br> <br>
+              <textarea class="form-control" id="remarks" cols="30" rows="10"></textarea> <br> <br>
             
               <input type="submit" value="Submit">
                     </form>
