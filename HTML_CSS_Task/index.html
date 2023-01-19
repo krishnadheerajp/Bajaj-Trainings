@@ -11,107 +11,28 @@
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Live Virtual Class</title>
 </head>
-<style>
-    /* header { */
-        /* background-image: url('images/class.webp'); */
-        /* min-height: 40vh; */
-    /* } */
-    body{
-        overflow-x: hidden !important;
-    }
-
-    nav ul {
-        margin: 0;
-        padding: 0;
-    }
-
-    nav ul li {
-        display: inline;
-        margin: 5px;
-    }
-
-    .course-titles{
-        border: 1px solid black;
-        background-color: rgb(102, 201, 201);
-        padding: 5px;
-    }
-
-    /* footer { */
-        /* position: fixed;*/
-        /* bottom: 0;
-        left: 0;
-        background-color: silver;
-        min-width: 100%;
-        text-align: center; */
-    /* } */
-
-    .fa {
-        padding: 10px;
-        font-size: 20px;
-        width: 40px;
-        text-align: center;
-        text-decoration: none;
-        margin: 10px 10px;
-        border-radius: 25px;
-    }
-
-    .fa:hover {
-        opacity: 0.7;
-    }
-
-    .fa-facebook {
-        background: #3B5998;
-        color: white;
-    }
-
-    .fa-twitter {
-        background: #55ACEE;
-        color: white;
-    }
-
-    .fa-google {
-        background: #dd4b39;
-        color: white;
-    }
-
-    .fa-linkedin {
-        background: #007bb5;
-        color: white;
-    }
-
-    #main-title {
-        position: relative;
-        animation-name: moveit;
-        animation: moveit 15s linear 0s infinite alternate;
-        text-shadow: 5px 5px 5px rgb(119, 74, 74);
-    }
-
-    @keyframes moveit {
-        from {
-            left: -50%;
-        }
-
-        to {
-            left: 100%;
-        }
-        from {background:lightcoral;}
-        to {background:lightseagreen;}
-    }
-
-    /* .main-frame{
-      height: 900px;
-    } */
-
-    .carousel-item {
-  height: 50vh;
+<script>
+ function loaderFun() {
+  $("#dialog").dialog();
 }
-
+function promptDone(){
+  $("#dialog").dialog( "close" );
+}
+</script>
+<style>
+  .social-icons:hover{
+    transform: scale(1.25);
+    color: white;
+  }
 </style>
 
-<body>
+<body onload="loaderFun()">
     <div id="carouselExampleIndicators" class="carousel slide slider" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -180,17 +101,26 @@
         <iframe src="about.html" class="main-frame" id="targetiframe" width="100%" name="iframe_a" frameborder="0"></iframe>
 
     </section>
-
+<div id="promptform">
+  <div id="dialog" title="Subscribe to LVC" style="display:none;">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" class="text form-control">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" class="text form-control">
+      <input type="button" onclick="promptDone()" class="mt-3 btn btn-primary form-control" value="OK">
+  </div>
+</div>
     <footer class="container-fluid bg-dark text-light mt-3 p-2 text-center">
         <p class="pt-3"><strong>Most Important Course for the Professionals:</strong>
             <span class="course-titles"> MEAN</span>
             <span class="course-titles">MERN</span>
             <span class="course-titles">DEVOPS</span>
         </p>
-        <p><a href="#" class="fa  fa-facebook"></a>
-            <a href="#" class="fa  fa-twitter"></a>
-            <a href="#" class="fa  fa-google"></a>
-            <a href="#" class="fa  fa-linkedin"></a>
+        <p>
+           <a href="#" class="social-icons fa  fa-facebook"></a>
+            <a href="#" class="social-icons fa  fa-twitter"></a>
+            <a href="#" class="social-icons fa  fa-google"></a>
+            <a href="#" class="social-icons fa  fa-linkedin"></a>
         </p>
         <p><strong>Website Designed & Developed By:</strong> <i>P Krishna Dheeraj</i></p>
     </footer>

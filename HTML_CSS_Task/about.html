@@ -1,65 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
-    <title>Document</title>
-    <style>
-        iframe{
-            margin-top: 15px;
-        }
-        .flex-container {
-  display: flex;
-  flex-wrap: nowrap;
-}
-.flex-container > div {
-  width: 50%;
-  margin: 10px;
-  text-align: center;
-}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <title>Document</title>
+  <style>
+    iframe {
+      margin-top: 15px;
+    }
 
+    .flex-container {
+      display: flex;
+      flex-wrap: nowrap;
+    }
 
-    </style>
+    .flex-container>div {
+      width: 50%;
+      margin: 10px;
+      text-align: center;
+    }
+  </style>
+  <script>
+    function pulldown_menu()
+{
+// Create a variable url to contain the value of the 
+// selected option from the the form named pulldown and variable selectname
+var url = document.pulldown.selectname.options[document.pulldown.selectname.selectedIndex].value
+
+// Re-direct the browser to the url value
+window.location.href = url        
+}
+  </script>
 </head>
+
 <body>
-  
-<div class="container mt-3">
-    <div class="row row-cols-1 row-cols-md-2 g-4 mx-3">
-        <div class="col">
-          <div class="card">
-            <div class="card-body text-center">
-                <h2> <canvas id="myCanvas" width="100" height="50" style="border:15px solid #d3d3d3;">
-                    Your browser does not support the HTML5 canvas tag.</canvas></h2>
-                <article>
-                    A live virtual classroom is a video conferencing tool where instructors and participants engage with each other and with the learning material. The difference with other video conferencing tools is that virtual classrooms offer an added set of features that are essential to a learning environment.
-                </article>
-            </div>
+
+  <div class="container mt-3">
+    <div class="row row-cols-1 row-cols-md-3 g-3 mx-3">
+      <div class="col">
+        <div class="card" data-aos="fade-up-right">
+          <div class="card-body text-center" style="background-color:lightskyblue">
+            <h2> <canvas id="myCanvas" width="105" height="50" style="border:5px solid #a94909;">
+                Your browser does not support the HTML5 canvas tag.</canvas></h2>
+            <article>
+              A live virtual classroom is a video conferencing tool where instructors and participants engage with each
+              other and with the learning material. The difference with other video conferencing tools is that virtual
+              classrooms offer an added set of features that are essential to a learning environment.
+            </article>
           </div>
         </div>
-        <div class="col">
-            <div class="card">
-              <div class="card-body">
-                <iframe height="480" width="100%"  
-                src="https://www.youtube.com/embed/il_t1WVLNxk">
-                </iframe>
+      </div>
+      <div class="col">
+        <div class="card" data-aos="fade-up">
+          <div class="card-body">
+            <iframe height="325" width="100%" src="https://www.youtube.com/embed/il_t1WVLNxk">
+            </iframe>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" data-aos="fade-up-left">
+          <div class="card-body">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Reference Websites
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+<p class="my-1">                    The following is the list of reference websites that have methods similar to live virtual class. Double click on them to redirect to their respective pages.</p>
+                    <div class="list-group mt-2">
+                      <button type="button" ondblclick="webfun1()" class="list-group-item list-group-item-action">IATA</button>
+                      <button type="button" ondblclick="webfun2()" class="list-group-item list-group-item-action">OSISOFT</button>
+                      <button type="button" ondblclick="webfun3()" class="list-group-item list-group-item-action">WIZIQ</button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-    </div>
-</div>
+        </div>
+      </div>
 </body>
 <script>
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  ctx.font = "bold 18px Tahoma";
+  ctx.strokeText("About LVC", 5, 30);
+  function webfun1(){
+    window.open('https://www.iata.org/en/training/courses/virtual-classrooms/', '_blank');
+  }
+  function webfun2(){
+    window.open('https://learning.osisoft.com/page/virtual-live-classroom', '_blank');
+  }
+  function webfun3(){
+    window.open('https://www.wiziq.com/virtual-classroom/', '_blank');
+  }
+  AOS.init({duration:1500, easing:'ease'});
+</script>
 
-    var c=document.getElementById("myCanvas");
-    var ctx=c.getContext("2d");
-    ctx.font="18px Arial";
-    ctx.strokeText("About LVC",5,30);
-    
-    </script>
 </html>

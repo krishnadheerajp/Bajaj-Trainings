@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Photo Gallery</title>
     <style>
         table {
@@ -34,6 +37,9 @@
         .pgtitle{
             text-align: center;
         }
+        td:hover > img{
+            transform: scale(0.75);
+        }
     </style>
 </head>
 
@@ -42,22 +48,24 @@
     <div class="container">
         <table class="center" cellspacing="15" cellpadding="15">
             <tr>
-                <td><img src="https://picsum.photos/id/237/200/300" alt=""></td>
-                <td><img src="https://picsum.photos/id/238/200/300" alt=""></td>
-                <td><img src="https://picsum.photos/id/230/200/300" alt=""></td>
+                <td data-aos="zoom-in"><img src="https://picsum.photos/id/237/200/300" alt=""></td>
+                <td data-aos="zoom-in"><img src="https://picsum.photos/id/238/200/300" alt=""></td>
+                <td data-aos="zoom-in"><img src="https://picsum.photos/id/230/200/300" alt=""></td>
             </tr>
             <tr class="secondrow">
-                <td><img src="https://picsum.photos/id/231/200/300" alt=""></td>
-                <td><img src="https://picsum.photos/id/232/200/300" alt=""></td>
-                <td><img src="https://picsum.photos/id/233/200/300" alt=""></td>
+                <td data-aos="zoom-in"><img src="https://picsum.photos/id/231/200/300" alt=""></td>
+                <td data-aos="zoom-in"><img src="https://picsum.photos/id/232/200/300" alt=""></td>
+                <td data-aos="zoom-in"><img src="https://picsum.photos/id/233/200/300" alt=""></td>
             </tr>
             <tr class="thirdrow">
-                <td><img src="https://picsum.photos/id/137/200/300" alt=""></td>
-                <td><img src="https://picsum.photos/id/139/200/300" alt=""></td>
-                <td><img src="https://picsum.photos/id/140/200/300" alt=""></td>
+                <td data-aos="zoom-in"><img src="https://picsum.photos/id/137/200/300" alt=""></td>
+                <td data-aos="zoom-in"><img src="https://picsum.photos/id/139/200/300" alt=""></td>
+                <td data-aos="zoom-in"><img src="https://picsum.photos/id/140/200/300" alt=""></td>
             </tr>
         </table>
     </div>
 </body>
-
+<script>
+AOS.init({duration:1500, easing:'ease'});
+</script>
 </html>

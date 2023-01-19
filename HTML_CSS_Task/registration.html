@@ -13,11 +13,11 @@
             var email=document.getElementById("email").value;
             if(name==""){
               alert("Name is required!");
-                return false;
+              return false;
             }
             else if(email==""){
               alert("Email is required!");
-                return false;
+              return false;
             }
             else{
               if(document.getElementById("male").checked){
@@ -67,17 +67,17 @@
       <div class="row row-cols-1 row-cols-md-2 g-4 mx-3">
         <div class="col">
           <div class="card">
-            <div class="card-body" style="height: 50vh">
+            <div class="card-body">
                 <img src="images/regformimg.jpeg" width="100%" alt="">
             </div>
           </div>
         </div>
         <div class="col">
             <div class="card">
-              <div class="card-body" style="height: 50%">
+              <div class="card-body">
                 <div class="formclass">
                     <h2>Registration Form</h2>
-                    <form name="main-form" onsubmit="return subfun();" action="thanks.html">
+                    <form name="main-form" onsubmit="return subfun();" action="thanks.html" target="_blank">
                         <label for="name" class="form-label">Name:</label>
                     <input type="text" name="username" class="form-controle" placeholder="Your name here" id="username"> <br><br>
             
