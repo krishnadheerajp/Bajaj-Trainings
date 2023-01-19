@@ -37,8 +37,8 @@
                 <div class="formclass">
                     <h2>Registration Form</h2>
                     <form onsubmit="return subfun();" action="index.html" method="post">
-                        <label for="name">Name:</label>
-                    <input type="text" name="" placeholder="Your name here" id="" required> <br><br>
+                        <label for="name" class="form-label">Name:</label>
+                    <input type="text" name="" class="form-controle" placeholder="Your name here" id="" required> <br><br>
             
                     <label for="">Gender:</label>
                     <input type="radio" name="age" id="">
@@ -46,8 +46,8 @@
                     <input type="radio" name="age" id="">
                     <label for="female">Female</label> <br> <br>
             
-                    <label for="email">Email:</label>
-                    <input type="email" name="" id="" placeholder="Your email here" required>
+                    <label class="form-label" for="email">Email:</label>
+                    <input class="form-control" type="email" name="" id="" placeholder="Your email here" required>
                     <br> <br>
             
                     <label for="location">Location:</label>
@@ -57,17 +57,17 @@
                 <option value="Mumbai">Mumbai</option>
               </select> <br>
               <br>
-              <label for="sk">Software Knowledge:</label> <br>
+              <label  class="form-label" for="sk">Software Knowledge:</label> <br>
               <input type="checkbox" id="skill1" name="skill1" value="Word">
-              <label for="skill1">Word</label>
+              <label  class="form-label" for="skill1">Word</label>
               <input type="checkbox" id="skill2" name="skill2" value="PHP">
-              <label for="skill2"> PHP</label>
+              <label  class="form-label" for="skill2"> PHP</label>
               <input type="checkbox" id="skill3" name="skill3" value="MS-Java">
-              <label for="skill3"> MS-Java</label>
+              <label class="form-label" for="skill3"> MS-Java</label>
               <br><br>
             
-              <label for="remark">Remarks:</label> <br>
-              <textarea name="" id="" cols="30" rows="10"></textarea> <br> <br>
+              <label for="remark" class="form-label">Remarks:</label> <br>
+              <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea> <br> <br>
             
               <input type="submit" value="Submit">
                     </form>
