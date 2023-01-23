@@ -65,7 +65,11 @@ nav ul li {
     position: relative;
     animation-name: moveit;
     animation: moveit 15s linear 0s infinite alternate;
-    text-shadow: 5px 5px 5px rgb(119, 74, 74);
+    text-shadow: 5px 5px 5px rgb(105, 105, 105);
+}
+
+#main-title>span{
+    text-shadow: none;
 }
 
 @keyframes moveit {
